@@ -1,15 +1,14 @@
 package com.work.controller;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.work.dto.Member;
 import com.work.service.MemberService;
 
 @Controller
@@ -55,17 +54,35 @@ public class MemberController {
 	
 	
 	@RequestMapping("/login")
-	public void login(String memberId, String memberPw) {
+	public String login(String memberId, String memberPw, Model model) {
 		System.out.println("로그인요청");
 		System.out.println(memberId + ", " + memberPw);
-//		return null;
+		
+		String grade = memberService.login(memberId,memberPw);
+		System.out.println("login grade : " + grade);
+		if(grade != null) {
+			model.addAttribute("message","[로그인 사용자] " + memberId);
+		} else {
+			model.addAttribute("message","[로그인 실패] 로그인 정보를 다시 확인하시기 바랍니다.");
+		}
+		
+		return "result";
 	}
 	
+	
 	@RequestMapping("/join")
-	public String join(Member dto) {
+	public String join(String memberId, String memberPw, String name, String mobile, String email, Model model) {
 		System.out.println("회원가입요청");
-		System.out.println(dto);
-		return null;
+		System.out.println(memberId + ", " + memberPw + ", " + name + ", " + mobile + ", " + email);
+		
+		int result = memberService.addMember(memberId,memberPw,name,mobile,email);
+		if(result >= 1) {
+			model.addAttribute("message","[회원가입 성공] " + memberId);
+		} else {
+			model.addAttribute("message","[회원가입 실패] 회원 정보를 다시 확인하시기 바랍니다.");
+		}
+		
+		return "result";
 	}
 	
 //	@RequestMapping("/login")

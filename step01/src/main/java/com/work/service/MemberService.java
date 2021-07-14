@@ -1,6 +1,7 @@
 package com.work.service;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
@@ -38,4 +39,28 @@ public class MemberService {
 	public int getSize() {
 		return list.size();
 	}
+
+	/** 로그인 */
+	public String login(String memberId, String memberPw) {
+		for(Member dto : list) {
+			if(dto.getMemberId().equals(memberId) && dto.getMemberPw().equals(memberPw)) {
+				return dto.getGrade();
+			}
+		}
+		return null;
+	}
+	
+
+	/** 회원가입 */ 
+	public int addMember(String memberId, String memberPw, String name, String mobile, String email) {
+		Member dto = Member.builder().memberId(memberId).memberPw(memberPw)
+				.name(name).mobile(mobile).email(email).entry_Date("2021-07-14")
+				.grade("G").mileage(1000).build();
+	      
+		list.add(dto);
+		
+		return 1;
+	}
+
+
 }
