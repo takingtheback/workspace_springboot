@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인페이지</title>
+<title>로그인페이지</title>
 <link type="text/css" rel="stylesheet" href="/css/common.css">
 </head>
 <body>
@@ -14,6 +14,11 @@
 <a href="loginForm">로그인</a>
 <a href="findMember">회원정보검색</a>
 <a href="/getMemberList">전체회원검색</a>
-<h3>메인페이지</h3>
+
+<h3>회원정보검색</h3>
+<form action="getMemberInfo" method="post">
+	<input type="text" name="memberId" autofocus="autofocus" required="required"/>
+	<input type="submit" name="검색"/>
+</form>
 </body>
 </html>

@@ -2,13 +2,17 @@ package com.work.controller;
 
 
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.work.dto.Member;
 import com.work.service.MemberService;
 
 @Controller
@@ -35,6 +39,11 @@ public class MemberController {
 	@RequestMapping("/loginForm")
 	public String loginForm() {
 		return "loginForm";	
+	}
+	
+	@RequestMapping("/findMember")
+	public String findMember() {
+		return "findMember";	
 	}
 	
 //	@RequestMapping("/join")
@@ -82,6 +91,28 @@ public class MemberController {
 			model.addAttribute("message","[회원가입 실패] 회원 정보를 다시 확인하시기 바랍니다.");
 		}
 		
+		return "result";
+	}
+	
+	
+	@RequestMapping("/getMemberList")
+	public String allMemberInfo(Model model) {
+		System.out.println("회원 전체 조회");
+		
+		ArrayList<Member> list = memberService.getMemberList();
+		for(int index = 0; index < list.size(); index++) {
+			System.out.println(list.get(index));
+			model.addAttribute("message", list);
+		}
+		model.addAttribute("MemberList", list);
+		return "result";
+	}
+	
+	@RequestMapping("/getMemberInfo")
+	public String getMemberInfo(String memberId, Model model) {
+		System.out.println("회원 조회");
+		Member dto = memberService.getMember(memberId);
+		model.addAttribute("message", dto);
 		return "result";
 	}
 	

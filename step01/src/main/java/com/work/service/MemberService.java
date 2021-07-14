@@ -62,5 +62,22 @@ public class MemberService {
 		return 1;
 	}
 
+	
+	/** 전체회원 조회 */
+	public ArrayList<Member> getMemberList() {
+		return list;
+	}
 
+	
+	
+	/** 회원 조회 */
+	public Member getMember(String memberId) {
+		for(Member dto : list) {
+			if(dto.getMemberId().equals(memberId)) {
+				return dto;
+			}
+		}
+		return null;
+	}
+	
 }

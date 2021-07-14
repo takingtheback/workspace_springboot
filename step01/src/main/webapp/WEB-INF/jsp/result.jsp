@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +9,18 @@
 <link type="text/css" rel="stylesheet" href="/css/common.css">
 </head>
 <body>
-<a href="/"><img src="/img/logo.png"></a>
+<a href="/main"><img src="/img/logo.png"></a>
 
 <a href="joinForm">회원가입</a>
 <a href="loginForm">로그인</a>
+<a href="findMember">회원정보검색</a>
+<a href="getMemberList">전체회원검색</a>
+
 <h3>메세지</h3>
 ${message}
+<%
+
+%>
+
 </body>
 </html>
