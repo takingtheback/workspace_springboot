@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* form config  */
+a {
+	text-decoration: none; 
+	}
+	
+a:hover {
+	color: red;
+	}
+	
+/* form config : input 태그 block, margin 설정*/
+form {
+	margin: 5px;
+	display: block;
+}
+
+
+/* form config : input 태그 submit, reset, button inline 설정*/
+input[type="submit"], input[type="reset"], input[type="button"] {
+	display: block;
+}
