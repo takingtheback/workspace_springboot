@@ -1,14 +1,23 @@
 package com.work.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.work.dto.Member;
+import com.work.service.MemberService;
 
 @Controller
 public class MemberController {
 
+	@Autowired
+	public MemberService memberService;
+	
 	// 응답페이지 이동 : jsp
 	// application.properties <- 변경 후에는 서버 재구동
 	// spring.mvc.view.prefix=/WEB-INF/jsp/
@@ -74,6 +83,28 @@ public class MemberController {
 //		System.out.println(map.get("memberId") + ", " + map.get("memberPw"));
 //		//return null;
 //	}
+	
+//	@RequestMapping("/member/size")
+//	@ResponseBody
+//	public int size() {
+//		return memberService.getSize();
+//	}
+	
+	
+//	@RequestMapping(value= "/member/size", method = RequestMethod.POST)
+//	@ResponseBody
+//	public int size() {
+//		return memberService.getSize();
+//	}
+	
+	
+	// @PostMapping("/member/size")
+	@GetMapping("/member/size")
+	@ResponseBody
+	public int size() {
+		return memberService.getSize();
+	}
+	
 	
 	
 }
