@@ -12,8 +12,6 @@
 
 <a href="joinForm">회원가입</a>
 <a href="loginForm">로그인</a>
-<a href="findMember">회원정보검색</a>
-<a href="/getMemberList">전체회원검색</a>
 
 <h3>회원가입페이지</h3>
 <form action="join" method="post">
@@ -22,8 +20,8 @@
 	이름<input type="text" name="name" required="required"/>
 	휴대폰<input type="text" name="mobile" required="required"/>
 	이메일<input type="text" name="email" required="required"/>
-	<input type="submit" name="가입"/>
-	<input type="reset" name="취소"/>
+	<input type="submit" value="가입"/>
+	<input type="reset" value="취소"/>
 </form>
 
 </body>

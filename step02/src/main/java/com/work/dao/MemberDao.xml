@@ -7,5 +7,11 @@
 	<select id="login" resultType="String" parameterType="map">
 		select grade from member where member_id=#{memberId} and member_pw=#{memberPw}
 	</select>
-  
+  	
+  	<!-- public int insertMember(Member dto)
+  	#{mileage, jdbcType=NUMERIC}, #{manager, jdbcType=VARCHAR}) null colum cofig-->
+  	<insert id="insertMember" parameterType="com.work.dto.Member">
+		insert into member values(#{memberId}, #{memberPw}, #{name}, #{mobile}, #{email}, #{entryDate}, #{grade}, 
+		#{mileage}, #{manager})
+	</insert>
 </mapper>

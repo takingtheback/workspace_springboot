@@ -12,8 +12,6 @@
 
 <a href="joinForm">회원가입</a>
 <a href="loginForm">로그인</a>
-<a href="findMember">회원정보검색</a>
-<a href="/getMemberList">전체회원검색</a>
 
 <h3>회원정보검색</h3>
 <form action="getMemberInfo" method="post">

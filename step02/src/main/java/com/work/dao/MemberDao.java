@@ -20,4 +20,5 @@ public interface MemberDao {
 	
 	/** 회원가입 */
 	public int insertMember(Member dto);
+
 }

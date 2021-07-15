@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!-- jstl -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +14,6 @@
 
 <a href="joinForm">회원가입</a>
 <a href="loginForm">로그인</a>
-<a href="findMember">회원정보검색</a>
-<a href="/getMemberList">전체회원검색</a>
 
 <h3>로그인페이지</h3>
 <form action="login" method="post">
@@ -22,5 +22,8 @@
 	<input type="submit" value="로그인"/>
 </form>
 
+<c:if test="${not empty message}">
+	${message}
+</c:if>
 </body>
 </html>

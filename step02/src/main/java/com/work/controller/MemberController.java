@@ -2,14 +2,11 @@ package com.work.controller;
 
 
 
-import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.work.dto.Member;
 import com.work.service.MemberService;
@@ -58,20 +55,23 @@ public class MemberController {
 	}
 	
 	
-//	@RequestMapping("/join")
-//	public String join(String memberId, String memberPw, String name, String mobile, String email, Model model) {
-//		System.out.println("회원가입요청");
-//		System.out.println(memberId + ", " + memberPw + ", " + name + ", " + mobile + ", " + email);
-//		
-//		int result = memberService.addMember(memberId,memberPw,name,mobile,email);
-//		if(result >= 1) {
-//			model.addAttribute("message","[회원가입 성공] " + memberId);
-//		} else {
-//			model.addAttribute("message","[회원가입 실패] 회원 정보를 다시 확인하시기 바랍니다.");
-//		}
-//		
-//		return "result";
-//	}
+	@RequestMapping("/join")
+	public String join(Member dto, Model model) {
+		System.out.println("회원가입요청");
+		System.out.println(dto);
+		
+		int result = memberService.addMember(dto);
+		if (result == 1) {
+			// 회원가입 성공
+			model.addAttribute("message", "[회원가입 성공] 로그인 후 서비스를 이용해주세요.");
+			return "loginForm";
+		} else {
+			// 회원가입 실패
+			model.addAttribute("message", "[회원가입 실패] 가입 정보를 확인해주세요.");
+			return "result";
+		}
+		
+	}
 	
 	
 //	@RequestMapping("/getMemberList")
