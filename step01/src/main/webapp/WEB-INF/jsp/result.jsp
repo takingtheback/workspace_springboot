@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!-- jstl -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <!DOCTYPE html>
 <html>
@@ -17,10 +18,15 @@
 <a href="getMemberList">전체회원검색</a>
 
 <h3>메세지</h3>
-${message}
-<%
+<c:if test="${not empty message}">
+	${message}
+</c:if>
 
-%>
+<c:if test="${not empty loginId}">
+	${loginId}
+</c:if>
+
+
 
 </body>
 </html>

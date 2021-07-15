@@ -10,7 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.work.dto.Member;
 import com.work.service.MemberService;
@@ -77,6 +79,42 @@ public class MemberController {
 		
 		return "result";
 	}
+	
+	// <h3>로그인페이지[name="id", name="pw"]</h3>
+//	@RequestMapping("/login/param")
+//	public String loginMap(
+//			@RequestParam(value = "id") String memberId,
+//			@RequestParam(value = "pw") String memberPw) {
+//		System.out.println(memberId + "," + memberPw);
+//		return null;
+//	}
+	
+	
+	// required = true >> Error Page : Required request parameter 'memberId' for method parameter type String is not present
+	
+	@RequestMapping("/login/null")
+	public String loginNull(
+			@RequestParam(required = true, defaultValue = "user01") String memberId,
+			@RequestParam(required = true, defaultValue = "password01") String memberPw) {
+		System.out.println(memberId + "," + memberPw);
+		return "main";
+	}
+	
+	
+	// <h3>로그인페이지[name="id", name="pw"]</h3>
+		@RequestMapping("/login/param")
+		public ModelAndView loginMap(
+				@RequestParam(value = "id") String memberId,
+				@RequestParam(value = "pw") String memberPw) {
+			System.out.println(memberId + "," + memberPw);
+			
+			//응답위한 객체 생성
+			ModelAndView mav = new ModelAndView();
+			mav.addObject("message","로그인정보");
+			mav.addObject("loginId",memberId);
+			mav.setViewName("result");
+			return mav;
+		}
 	
 	
 	@RequestMapping("/join")
