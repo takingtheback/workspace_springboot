@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.work.dao.MemberDao">
+
+	<!-- public String login(String memberId, String memberPw) -->
+	<select id="login" resultType="String" parameterType="map">
+		select grade from member where member_id=#{memberId} and member_pw=#{memberPw}
+	</select>
+  	
+  	<!-- public Member loginToMember(String memberId, String memberPw) -->
+	<select id="loginToMember" resultType="com.work.dto.Member">
+		select * from member where member_id=#{memberId} and member_pw=#{memberPw}
+	</select>
+  	
+  	<!-- public int insertMember(Member dto)
+  	#{mileage, jdbcType=NUMERIC}, #{manager, jdbcType=VARCHAR}) null colum cofig-->
+  	<insert id="insertMember" parameterType="com.work.dto.Member">
+		insert into member values(#{memberId}, #{memberPw}, #{name}, #{mobile}, #{email}, #{entryDate}, #{grade}, 
+		#{mileage}, #{manager})
+	</insert>
+	
+	<!-- public Member selectMember(String memberId) -->
+	<select id="selectMember" resultType="com.work.dto.Member">
+		select * from member where member_id=#{memberId}
+	</select>
+	
+	<!-- public List<Member> selectMemberList() -->
+	<select id="selectMemberList" resultType="com.work.dto.Member">
+		select * from member
+	</select>
+	
+	<!--  public List<Member> memberListByCondition(String condition, String keyword) 
+	select * from member where member_id='user01';
+	select * from member where grade ='G';
+	-->
+	<select id="selectMemberListByCondition" resultType="Member" parameterType="map">
+		select * from member
+		<if test="keyword != null and keyword != ''">
+			<where>
+				<choose>
+					<when test="condition == 'memberId'">member_id=#{keyword}</when>
+					<when test="condition == 'grade'">grade=#{keyword}</when>
+					<when test="condition == 'memberIdOrEmail'">member_id=#{keyword} or email=#{keyword}</when>
+					<when test="condition == 'mileage'">mileage >=#{keyword}</when>
+					<when test="condition == 'manager'">manager=#{keyword}</when>
+					<when test="condition == 'mobile'">mobile like '%' || #{keyword}</when>
+					<when test="condition == 'email'">email=#{keyword}</when>
+					<when test="condition == 'name'">name=#{keyword}</when>
+				</choose>
+			</where>
+		</if>
+	</select>
+	
+</mapper>

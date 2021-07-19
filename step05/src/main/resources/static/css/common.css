@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* form config  */
+a {
+	text-decoration: none; 
+}
+	
+a:hover {
+	color: red;
+}
+	
+/* form config : input 태그 block, margin 설정*/
+form {
+	margin: 5px;
+	display: block;
+}
+
+table, tr, td, th { 
+	border: solid 1px orange; 
+}
+
+/* form config : input 태그 submit, reset, button inline 설정*/
+input[type="text"], input[type="password"], input[type="submit"], input[type="reset"], input[type="button"] {
+	display: block;
+	margin: 5px;
+}
+
+.searchForm {
+	display: inline-block;	
+}
