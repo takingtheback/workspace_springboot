@@ -49,6 +49,8 @@ update member set member_pw='aa', name='bb', mobile='cc', email='dd' where membe
 -- 전체조회
 select * from member;
 
+delete from member where member_Id='test01';
+
 -- 다중조건 테스트를 위한 레코드 초기화 추가 : 다중조건을 참고로해서 데이터정보를 설정해서 추가하세요
 -- multipleCondigion init insert : 
 insert into member(member_id, member_pw, name, mobile, email, entry_date, grade, mileage)
@@ -114,9 +116,11 @@ select * from member where member_id='user01' or email ='user01@work.com';
 -- 다중 아이디 다중조건 검색
 select * from member where member_id in('user01','user02');
 
+ 
+ -- drop table
+drop table FREEBOARD cascade constraints purge;
   
 create table FREEBOARD (
-	NUM number(9),
 	TITLE varchar2(50) not null,
 	MEMBER_ID varchar2(30) not null,
 	BDATE date not null,
@@ -128,22 +132,25 @@ create table FREEBOARD (
 delete FREEBOARD;
 
 INSERT INTO FREEBOARD
-VALUES(1, '주말과제', 'user05', '2020-11-11', 0,0,'회원도서관리DB설계');
+VALUES('주말과제', 'user05', '2020-11-11', 0,0,'회원도서관리DB설계');
 
 INSERT INTO FREEBOARD
-VALUES(2, '형상관리','user04', '2020-12-25',	0, 0, '형상관리 소개');
+VALUES('형상관리','user04', '2020-12-25',	0, 0, '형상관리 소개');
 
 INSERT INTO FREEBOARD
-VALUES(3, '주말과제', 'user05', '2021-02-14', 0, 0, '화면정의서');
+VALUES('주말과제', 'user05', '2021-02-14', 0, 0, '화면정의서');
 
 INSERT INTO FREEBOARD
-VALUES(4, '과제제출' ,'user05', '2021-03-01', 0,0,'시간엄수');
+VALUES('과제제출' ,'user05', '2021-03-01', 0,0,'시간엄수');
 
 INSERT INTO FREEBOARD
-VALUES(5, 'WEB참고', 'user01', '2021-05-26', 0, 0, 'www.w3schools.com');
+VALUES('WEB참고', 'user01', '2021-05-26', 0, 0, 'www.w3schools.com');
 
 INSERT INTO FREEBOARD
-VALUES(6, 'WEB참고1', 'user01', TO_CHAR(SYSDATE,'YYYY-MM-DD'), 0,0, 'www.w3schools.com');
+VALUES('WEB참고1', 'user01', TO_CHAR(SYSDATE,'YYYY-MM-DD'), 0,0, 'www.w3schools.com');
+
 
 -- 전체조회
 select * from freeboard;
+
+select num from freeboard order by num desc;

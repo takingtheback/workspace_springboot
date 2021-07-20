@@ -16,8 +16,8 @@
 <body>
 <div class = "container">
 	<div class = "row">
-	<form action="doWrite" method="post">
-		<table class = "board">
+	<form action="/board/doWrite" method="post">
+		<table>
 			<thead>
 				<tr>
 					<th colspan="2">글쓰기</th>
@@ -25,10 +25,10 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><input type="text" class="form-control" placeholder="제목" name="boardTitle" maxlenght="50"/></td>
+					<td><input type="text"  placeholder="제목" name="title" maxlenght="50"/></td>
 				</tr>
 				<tr>
-					<td><textarea type="text" class="form-control" placeholder="본문" name="boardContents" maxlenght="4000" height=350px;></textarea></td>
+					<td><textarea type="text"  placeholder="본문" name="contents" maxlenght="4000" height=350px;></textarea></td>
 				</tr>
 			</tbody>
 		</table>

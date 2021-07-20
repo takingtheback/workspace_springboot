@@ -17,6 +17,33 @@
 <h3>자유게시판</h3>
 <table>
 	<tr>
+		<th>제목</th>
+		<td>${to.title}</td>
+	</tr>
+	<tr>
+		<th>작성자</th>
+		<td>${dto.memberId}</td>
+	</tr>
+	<tr>
+		<th>작성일</th>
+		<td>${dto.BDate}</td>
+	</tr>
+	<tr>
+		<th>조회</th>
+		<td>${dto.views}</td>
+	</tr>
+	<tr>
+		<th>추천</th>
+		<td>${dto.thumbs}</td>
+	</tr>
+	<tr>
+		<th>본문</th>
+		<td>${dto.contents}</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
 		<th>번호</th>
 		<th>제목</th>
 		<th>작성자</th>
@@ -35,7 +62,7 @@
 		<tr>
 			<!-- status.index => 0시작, status.count => 1시작 -->
 			<th>${status.count}</th>
-			<th><a href="freeBoardDetail?dto=${dto}">${dto.title}</a></th>
+			<th><a href="freeBoardDetail?title=${dto.title}">${dto.title}</a></th>
 			<th>${dto.memberId}</th>
 			<th>${dto.BDate}</th>
 			<th>${dto.views}</th>
