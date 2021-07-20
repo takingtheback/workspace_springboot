@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.board {
+	text-align : center;
+	border: 1px solid #dddddd;
+}
+.th {
+	background-color : #eeeeee;
+	text-align : center;
+}

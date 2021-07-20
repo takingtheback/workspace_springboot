@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.work.dao.MemberDao">
+
+	<!-- public String login(String memberId, String memberPw) -->
+	<select id="login" resultType="String" parameterType="map">
+		select grade 
+		from member 
+		where member_id=#{memberId} and member_pw=#{memberPw}
+	</select>
+
+	<!-- public Member loginToMember(String memberId, String memberPw) -->
+	<select id="loginToMember" resultType="Member">
+		select * from member where member_id = #{memberId} and member_pw=#{memberPw}
+	</select>
+
+
+	<!-- public int insertMember(Member dto) 
+		#{mileage, jdbcType=NUMERIC}, #{manager, jdbcType=VARCHAR} null colum config -->
+	<insert id="insertMember" parameterType="Member">
+		insert into member
+		values(#{memberId}, #{memberPw}, #{name}, #{mobile}, #{email}, #{entryDate}, #{grade},
+		#{mileage}, #{manager})
+	</insert>
+	
+  <!-- public List<Member> selectMemberList() 
+  		mybatis.type-aliases-package=com.work.dto
+  	-->
+  <select id="selectMemberList" resultType="com.work.dto.Member">
+  	select * from member order by grade
+  </select>
+  
+  <!-- public Member selectMember(String memberId) -->
+  <select id="selectMember" parameterType="String" resultType="com.work.dto.Member">
+  	select * from member where member_id=#{memberId}
+  </select>
+	
+  <!-- public List<Member> selectMemberListByCondition(String condition, String keyword) 
+  	select * from member WHERE MEMBER_ID='user01'
+  	select * from member WHERE MILEAGE >= 100000
+  	keyword가 미입력하면 전체회원조회, 즉 where 구문 지정하지 않음
+  -->
+  <select id="selectMemberListByCondition" resultType="Member" parameterType="map">
+  	select * from member 
+  	<if test="keyword != null and keyword != ''">
+  		<where>
+  			<choose>
+  				<when test="condition == 'memberId'">MEMBER_ID = #{keyword}</when>
+  				<when test="condition == 'name'">name = #{keyword}</when>
+  				<when test="condition == 'mobile'">mobile like '%' || #{keyword}</when>
+  				<when test="condition == 'email'">email = #{keyword}</when>
+  				<when test="condition == 'grade'">grade = #{keyword}</when>
+  				<when test="condition == 'mileage'">mileage >= #{keyword}</when>
+  				<when test="condition == 'manager'">name = #{keyword}</when>
+  				<when test="condition == 'memberIdOrEmail'">MEMBER_ID = #{keyword} OR email = #{keyword}</when>
+  			</choose>
+  		</where>
+  	</if>
+  </select>
+  
+  <!-- public List<Member> selectMemberListByConditionToList(String condition, List<String> memberIdList) -->	
+  <select id="selectMemberListByConditionToList" resultType="Member" parameterType="map">
+		select * from member
+	<if test="condition == 'memberId'">
+		<where>
+			member_id IN
+			<foreach collection="memberIdList" item="memberId" open="(" separator="," close=")">
+				#{memberId}
+			</foreach>
+		</where>
+	</if>
+  </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
