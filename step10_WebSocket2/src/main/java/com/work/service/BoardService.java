@@ -30,8 +30,11 @@ public class BoardService {
 		return boardDao.selectQnABoardList();
 	}
 
-	/** 게시글 상세조회 */
+	/** 게시글 상세조회 
+	 *  문의글 조회수 증가 
+	 */
 	public QnABoard QnABoardDetail(int qnaBoardNo) {
+		boardDao.updateQnABoardViews(qnaBoardNo);
 		return boardDao.selectQnABoardDetail(qnaBoardNo);
 	}
 
@@ -79,6 +82,10 @@ public class BoardService {
 	public List<QnABoard> QnAListByCondition(String condition, String keyword) {
 		return boardDao.selectQnAListByCondition(condition, keyword);
 	}
+
+	
+	
+
 
 	
 }
