@@ -20,10 +20,10 @@
         <div style="padding-top: 8%;">
             <h1 class="display-5 fw-bolder">문의게시판</h1>
             <p class="lead fw-normal text-white-80 mb-0">직접 문의글을 남겨보세요.</p>
-    </div>
-    </div>
- </div>
-  </a>
+	    </div>
+	    </div>
+		</div>
+ 	</a>
 </header>
 
 <!-- QnA 게시판 항목 -->
