@@ -40,7 +40,7 @@
     <select id="getTotal" resultType="int">
         select count(*) from QNABOARD
     <if test="keyword != null">
-            where QNABOARD_NO > 0 <include refid="criteria"></include>
+		where QNABOARD_NO > 0 <include refid="criteria"></include>
 	</if>    
     </select>
     
@@ -48,11 +48,11 @@
     <insert id="updateQnABoard" parameterType="com.work.dto.QnABoard">
         UPDATE QNABOARD
 		SET
-		QNABOARD_TITLE = #{qnaBoardTitle}, 
-		QNABOARD_CONTENTS = #{qnaBoardContents},
-		QNABOARD_DATE = #{qnaBoardDate}
+			QNABOARD_TITLE = #{qnaBoardTitle}, 
+			QNABOARD_CONTENTS = #{qnaBoardContents},
+			QNABOARD_DATE = #{qnaBoardDate}
 		WHERE
-		QNABOARD_NO= #{qnaBoardNo}
+			QNABOARD_NO= #{qnaBoardNo}
     </insert>
     
     <!-- 문의글 삭제 public QnABoard deleteQnABoardList(int qnaBoardNo) --> 
@@ -81,4 +81,16 @@
 		</trim>
 	
 	</sql>
+	
+	<!-- 문의글 조회수 증가	public Object updateQnABoardViews(int qnaBoardNo) -->
+	<insert id="updateQnABoardViews" parameterType="com.work.dto.QnABoard">
+		UPDATE 
+		    QNABOARD
+		SET
+		    QNABOARD_VIEWS = QNABOARD_VIEWS + 1
+		WHERE
+		    QNABOARD_NO= #{qnaBoardNo}
+    </insert>
+	
+	
 </mapper>
