@@ -13,6 +13,7 @@
 <%@ include file="../inc/header.jsp" %>
 <!-- Header-->
 <header class="bg-warning py-5">
+<a href="/board/QnABoard" style="text-decoration:none">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
         <!-- 헤더...어떻게... -->
@@ -22,6 +23,7 @@
     </div>
     </div>
  </div>
+ </a>
 </header>
 <div class="QnAForm">
 <table class="QnATable" >
