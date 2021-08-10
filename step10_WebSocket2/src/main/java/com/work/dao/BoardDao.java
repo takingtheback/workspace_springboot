@@ -33,6 +33,10 @@ public interface BoardDao {
 
 	/** 다중조건 조회 */
 	public List<QnABoard> selectQnAListByCondition(String condition, String keyword);
+
+	/** 문의글 조회수 증가 */
+	public int updateQnABoardViews(int qnaBoardNo);
+
 	
 	
 	
