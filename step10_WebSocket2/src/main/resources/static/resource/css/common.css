@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* Filename : css/common.css */
+
+/* a config*/
+a { text-decoration: none; }
+a:hover { color: red; }
+
+/* form config : input 태그 block, margin 설정 */
+input { display: block; margin: 5px; }
+
+/* form config : input 태그 submit, reset, button inline 설정 */
+input[type="submit"], input[type="reset"], input[type="button"] { display: inline; }
+
+input[type="submit"] { 
+	border: none; background-color: orangered; color: white; 
+	border-radius: 3px; width: 60px; height: 30px;
+	padding: 5px 0;
+}
+input[type="reset"] { 
+	border: none; background-color: gray; color: white; 
+	border-radius: 3px; width: 60px; height: 30px;
+	padding: 5px 0; 
+}
+
+input[type="submit"]:hover { background-color: orange; }
+input[type="reset"]:hover { background-color: royalblue; }
+
+
+/* table */
+table, tr, td, th { border: solid 1px royalblue; padding: 5px; margin: 5px; }
+
+/* 다중조건검색 */
+input.inline { display: inline; }
+div.multipleCondition { margin-top: 20px; margin-left: 20px; }
+
+/* 조각페이지 메뉴 config */
+span.seperator { font-size: 0.7em; padding: 0 5px; }
+
+div.beforeMenu, div.afterMenu, div.mainMenu, div.afterMenuAdmin { text-align: right; font-size: 11px; }
+
+div.footerMenu { text-align: center; }
