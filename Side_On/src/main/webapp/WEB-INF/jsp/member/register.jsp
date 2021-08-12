@@ -21,6 +21,34 @@
 
     <!-- Custom styles for this template-->
     <link href="../css/register_sh.css" rel="stylesheet">
+    <script>
+    
+    function idCheck() {
+    	var memberId = document.getElementById('memberId').value;
+    	alert("아이디 : " + memberId);
+    }    
+    
+    function pwCheck() {
+    	var memberPw = document.getElementById('memberPw').value;
+    	alert("비밀번호 : " + memberPw);
+    }
+    
+    function nameCheck() {
+    	var name = document.getElementById('name').value;
+    	alert("이름 : " + name);
+    }
+    
+    function emailCheck() {
+    	var email = document.getElementById('email').value;
+    	alert("이메일 : " + email);
+    }
+    
+    function mobileCheck() {
+    	var mobile = document.getElementById('mobile').value;
+    	alert("핸드폰 번호 : " + mobile)
+    }
+
+    </script>
 
 </head>
 
@@ -42,13 +70,17 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">환영합니다!</h1>
                             </div>
-                            <form class="user">
+                            
+                            <!-- 회원가입 폼 -->
+                            <form action='/member/registerDone' method="post" class="user">
                                
                                <!-- 이미지어케바꾸냐.. -->
                                 <div class="form-group row">
+                               
+                               <!-- 아이디 -->
                                 <div class="col-sm-8 mb-3 mb-sm-0">
-                                    <input type="id" class="form-control form-control-user" id="exampleInputId"
-                                        placeholder="아이디">
+                                    <input type="text" class="form-control form-control-user" id="memberId" name="memberId"
+                                        placeholder="아이디" required="required">
                                 </div>
                                 <div class="col-sm-4 mb-3 mb-sm-0">
                                    <a href="#" class="btn btn-outline-warning btn-user btn-block">
@@ -57,28 +89,33 @@
                                 </div>
                                 </div>
                                 
+                                <!-- 비밀번호 -->
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="비밀번호">
+                                            id="memberPw" name="memberPw" placeholder="비밀번호" required="required">
                                    	</div>
                                    <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="비밀번호 확인">
+                                            id="memberPw" name="memberPw" placeholder="비밀번호 확인" required="required">
                                     </div>
-                
+                				
+                				<!-- 이름 -->
                                 <div class="form-group">
-                                    <input type="name" class="form-control form-control-user" id="exampleInputName"
-                                        placeholder="이름">
+                                    <input type="text" class="form-control form-control-user" id="name" name="name"
+                                        placeholder="이름" required="required">
                                 </div>
                                 
+                                <!-- 이메일 -->
                                 <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="이메일 ex)id@mail.com">
+                                    <input type="text" class="form-control form-control-user" id="email" name="email"
+                                        placeholder="이메일 ex)id@mail.com" required="required">
                                 </div>
+                                
+                                <!-- 핸드폰번호 -->
                                   <div class="form-group row">
                                 <div class="col-sm-8 mb-3 mb-sm-0">
-                                    <input type="mobile" class="form-control form-control-user" id="exampleInputMobile"
-                                        placeholder="핸드폰번호 ex)010-0000-0000">
+                                    <input type="text" class="form-control form-control-user" id="mobile" name="mobile"
+                                        placeholder="핸드폰번호 ex)010-0000-0000" required="required">
                                 </div>
                                  <div class="col-sm-4 mb-3 mb-sm-0">
                                    <a href="#" class="btn btn-outline-warning btn-user btn-block">
@@ -86,15 +123,16 @@
                                 </a>
                                 </div>
                                 </div>
-                              
-                                <a href="loginForm" class="btn btn-primary btn-user btn-block">
-                                   완료
-                                </a>
+                              	
+                              	
+                                <input type="submit" value='완료' class="btn btn-primary btn-user btn-block" 
+                                onclick="idCheck(); pwCheck(); nameCheck(); emailCheck(); mobileCheck();">
+                                
                                 <a href="/" class="btn btn-light btn-user btn-block">
                                    취소
                                 </a>
                               
-                           
+                            </form>
                             <hr>
                             <div class="text-center">
                                 <a class="small" href="loginForm">이미 회원가입이 되어 있어요!</a>

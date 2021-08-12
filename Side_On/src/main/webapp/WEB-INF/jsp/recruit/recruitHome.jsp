@@ -6,45 +6,55 @@
 <head>
 <meta charset="UTF-8">
 <title>프로젝트 모집/지원 | Side-On</title>
-
+ 
 <link type="text/css" rel="stylesheet" href="../css/RecruitHome_juri.css">
-
 
 </head>
 <body>
    <%@ include file="../inc/header.jsp" %>
     <!-- Services-->
-        <section  >
-            <div class="container" >
-                <div style="padding-top: 1%; padding-bottom: 3%">
-                    <h2>프로젝트 모집/지원</h2>
-                </div>
-		
-                <div class="search-container" style="float: left;">
-                    <form >
-                      <input type="text" placeholder="Search.." name="search">
-                      <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                  </div>
-         		<div class="checkbox" >	    
-					    <label for="check1">모집 중  </label>
-					    <input type="checkbox" name="check1" id="check1" value="1" class="checkbox1">
-				</div>
-				               
-                 <div style="padding-top: 4%">
-                  	<ul class="tags">
-					  <li><a href="#" class="tag">FrontEnd</a></li>
-					  <li><a href="#" class="tag">BackEnd</a></li>
-					  <li><a href="#" class="tag">AOS</a></li>
-					  <li><a href="#" class="tag">IOS</a></li>
-					   <li><a href="#" class="tag">Server</a></li>
-					   <li><a href="#" class="tag">UI/UX</a></li>
-					 <li><a href="#" class="tag">기획</a></li>
-					 	<li><a href="#" class="tag">PM</a></li>
-					</ul>
-                  </div>
-                
+            <!-- Header-->
+        <header class="bg-warning py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                <!-- 헤더...어떻게... -->
+                <div style="padding-top: 8%;">
+                    <h1 class="display-5 fw-bolder">프로젝트 모집/지원</h1>
             </div>
+            </div>
+         </div>
+        </header>
+        
+        <section >
+	        <div class="row">
+			       	<div class="col-md-6 center" >
+			
+			                <div class="search-container" style="float: left;">
+			                    <form >
+			                      <input type="text" placeholder="Search.." name="search">
+			                      <button type="submit"><i class="fa fa-search"></i></button>
+			                    </form>
+			                  </div>
+			         		<div class="checkbox" style="float: left;">	    
+								    <label for="check1">모집 중  </label>
+								    <input type="checkbox" name="check1" id="check1" value="1" class="checkbox1">
+							</div>
+							
+							               
+			                 <div style="padding-top: 10%" style="float: left;">
+			                  	<ul class="tags">
+								  <li><a href="#" class="tag">FrontEnd</a></li>
+								  <li><a href="#" class="tag">BackEnd</a></li>
+								  <li><a href="#" class="tag">AOS</a></li>
+								  <li><a href="#" class="tag">IOS</a></li>
+								   <li><a href="#" class="tag">Server</a></li>
+								   <li><a href="#" class="tag">UI/UX</a></li>
+								 <li><a href="#" class="tag">기획</a></li>
+								 	<li><a href="#" class="tag">PM</a></li>
+								</ul>
+			                  </div>
+						</div>
+				</div>
         </section>
         <!-- Portfolio Grid-->
         <section class="page-section" id="portfolio" style="padding : 0; margin : 0; ">
@@ -146,8 +156,36 @@
                             </div>
                         </div>
                     </div>
+                    
+                	<div class="col-md-3 center"  style="padding-top:10%;">     
+			               <nav class="pagination-outer center" aria-label="Page navigation">
+			                       <ul class="pagination">
+			                           <li class="page-item">
+			                               <a href="#" class="page-link" aria-label="Previous">
+			                                   <span aria-hidden="true">«</span>
+			                               </a>
+			                           </li>
+			                           <li class="page-item"><a class="page-link" href="#">1</a></li>
+			                           <li class="page-item"><a class="page-link" href="#">2</a></li>
+			                           <li class="page-item active"><a class="page-link" href="#">3</a></li>
+			                           <li class="page-item"><a class="page-link" href="#">4</a></li>
+			                           <li class="page-item"><a class="page-link" href="#">5</a></li>
+			                           <li class="page-item">
+			                               <a href="#" class="page-link" aria-label="Next">
+			                                   <span aria-hidden="true">»</span>
+			                               </a>
+			                           </li>
+			                       </ul>
+			                   </nav>
+						</div>
+                    
+                    
                 </div>
             </div>
+            
+            
+            
+            
         </section>
        
         <!-- Bootstrap core JS-->

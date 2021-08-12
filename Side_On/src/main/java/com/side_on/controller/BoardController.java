@@ -34,6 +34,12 @@ public class BoardController {
 		return "board/QnABoardDetail";
 	}
 	
+	/** QnA게시글 등록 결과화면 */
+	@RequestMapping("/board/WriteResult")
+	public String WriteResult() {
+	
+		return "board/WriteResult";
+	}
 	
 	/** QnA게시글 삭제 결과화면 */
 	@RequestMapping("/board/DeleteResult")
@@ -100,14 +106,14 @@ public class BoardController {
 	@RequestMapping("/board/QnAWrite")
 	public String QnAWrite(QnABoard dto, Model model) {
 		
-			int result = boardService.addQnABoard(dto);
-			if (result == 1) {
-				return "board/WriteResult";
-			} else {
-				model.addAttribute("message", "[문의글작성 실패] 작성 정보를 다시 확인하시기 바랍니다.");
-				return "result";
-			}
+		int result = boardService.addQnABoard(dto);
+		if (result == 1) {
+			return "board/WriteResult";
+		} else {
+			model.addAttribute("message", "[문의글작성 실패] 작성 정보를 다시 확인하시기 바랍니다.");
+			return "result";
 		}
+	}
 	
 	
 	/** QnA게시글 작성화면 */

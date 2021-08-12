@@ -143,7 +143,7 @@
                 										<c:forEach var="dto" items="${noticeList}" varStatus="status">
                 											<tr>
 	               												<th>${dto.noticeNo}</th>
-	               												<th><a href="../notice/noticeDetail?noticeNo=${dto.noticeNo}" style="color: #3f3f3f;">${dto.noticeTitle}</a></th>
+	               												<th><a href="../notice/adminNoticeDetail?noticeNo=${dto.noticeNo}" style="color: #3f3f3f;">${dto.noticeTitle}</a></th>
 	               												<th>${dto.noticeDate}</th>
 	               											</tr>
                 										</c:forEach>

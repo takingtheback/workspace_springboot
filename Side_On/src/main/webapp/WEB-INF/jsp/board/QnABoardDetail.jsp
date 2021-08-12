@@ -32,7 +32,7 @@
 		<th>문의제목</th>
 		<th>작성자</th>
 		<th>작성일</th>
-		<th class="QnA_Views">조회수</th>
+		<th>조회수</th>
 	</tr>
 	
 	<tr>
@@ -53,27 +53,30 @@
 	</tr>
 	<tr class="qnaContents">
 	<th colspan="5"><textarea id="qnaContentsArea" name="qnaContentsArea" rows="5" cols="33">
-	${dto.qnaBoardContents}</textarea>
+	${dto.qnaBoardContents}</textarea></th>
 	</tr>
-	</th>	
-</table>
+	</table>
+
 </div>
+		
 <div class=UpdateButtonArea>
-	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+
+   <c:choose>
+	<c:when test="${(not empty memberId && not empty grade) || empty dto}">
+	<c:if test="${ memberId == dto.memberId }">
+	<button type="button" class="btn-warning" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 	onclick="location.href='QnABoardUpdate?qnaBoardNo=${dto.qnaBoardNo}'">수정하기</button>
-	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+	<button type="button" class="btn-warning" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 	onclick="deleteConfirm()">삭제하기</button>
+	</c:if>
+	</c:when>
+	</c:choose>
 	
-	<!-- onclick="location.href='QnABoardDelete?qnaBoardNo=${dto.qnaBoardNo}'">삭제하기</button> -->
-	
-	<!-- onclick="location.href='/board/QnABoardDelete'">삭제하기</button> --> 
-	
-	<button type="button" class="UpdateButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+	<button type="button" class="btn-warning" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 	onclick="location.href='QnABoard'">되돌아가기</button>
 </div>
 
-<button name="deleteButton" id="deleteButton"  style="display:none" onclick="location.href='QnABoardDelete?qnaBoardNo=${dto.qnaBoardNo}'"></button>
-
+<input type="hidden" name="deleteButton" id="deleteButton" onclick="location.href='QnABoardDelete?qnaBoardNo=${dto.qnaBoardNo}'"></input>
 
 
 

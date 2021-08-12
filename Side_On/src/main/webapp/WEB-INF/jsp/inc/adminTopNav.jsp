@@ -13,22 +13,27 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-					<li class="nav-item"><a class="nav-link" href="#services"
+					<li class="nav-item"><a class="nav-link" href="../notice/noticeList"
 						onmouseover="this.style.color='#ffc800';"
-						onmouseout="this.style.color='#d1d3e2';">Services</a></li>
-					<li class="nav-item"><a class="nav-link" href="#portfolio"
+						onmouseout="this.style.color='#d1d3e2';">NOTICE</a></li>
+					<li class="nav-item"><a class="nav-link" href="../recruit/recruitHome"
 						onmouseover="this.style.color='#ffc800';"
-						onmouseout="this.style.color='#d1d3e2';">
-							Portfolio</a></li>
-					<li class="nav-item"><a class="nav-link" href="#about"
+						onmouseout="this.style.color='#d1d3e2';">RECRUIT</a></li>
+					<li class="nav-item"><a class="nav-link" href="../find/list"
 						onmouseover="this.style.color='#ffc800';"
-						onmouseout="this.style.color='#d1d3e2';">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="#team"
+						onmouseout="this.style.color='#d1d3e2';">FIND</a></li>
+					<li class="nav-item"><a class="nav-link" href="../board/replyBoard"
 						onmouseover="this.style.color='#ffc800';"
-						onmouseout="this.style.color='#d1d3e2';">Team</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="/board/FaQBoard" onmouseover="this.style.color='#ffc800';"
-						onmouseout="this.style.color='#d1d3e2';">Contact</a></li>
+						onmouseout="this.style.color='#d1d3e2';">BOARD</a></li>
+					<li class="nav-item"><a class="nav-link" href="../board/Mypage"
+						onmouseover="this.style.color='#ffc800';"
+						onmouseout="this.style.color='#d1d3e2';">MYPAGE</a></li>
+					<li class="nav-item"><a class="nav-link" href="../admin/dashboard"
+						onmouseover="this.style.color='#ffc800';"
+						onmouseout="this.style.color='#d1d3e2';">ADMINPAGE</a></li>
+					<li class="nav-item"><a class="nav-link" href="../member/logout" 
+						onmouseover="this.style.color='#ffc800';"
+						onmouseout="this.style.color='#d1d3e2';">LOGOUT</a></li>
 				</ul>
 			</div>
 		</div>

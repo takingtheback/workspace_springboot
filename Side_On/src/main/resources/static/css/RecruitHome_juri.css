@@ -379,6 +379,8 @@ margin : 0 auto;
   cursor: pointer;
 }
 
+/** 페이징*/
+
 .pagination-outer{ text-align: center; }
 .pagination{
     font-family: 'Nunito Sans', sans-serif;
@@ -443,4 +445,74 @@ margin : 0 auto;
         margin-bottom: 10px;
         display: inline-block;
     }
+}
+
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}   
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.px-lg-5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.display-5 {
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.fw-bolder {
+  font-weight: bolder !important;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.fw-normal {
+  font-weight: 400 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
 }

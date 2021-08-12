@@ -54,7 +54,7 @@
 									>Board</a></li>
 								<li class="nav-item"><a class="nav-link" href="/board/Mypage" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>MyPage</a></li>
-								<li class="nav-item"><a class="nav-link" href="#contact" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+								<li class="nav-item"><a class="nav-link" href="/admin/dashboard" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>AdminPage</a></li>
 								<li class="nav-item"><a class="nav-link" href="/member/logout" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
 									>LogOut</a></li>	

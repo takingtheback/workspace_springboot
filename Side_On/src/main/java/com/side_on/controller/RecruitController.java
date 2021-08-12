@@ -40,5 +40,12 @@ public class RecruitController {
 		
 		return "recruit/recruitMypage2"; 
 	}
+	
+	/** 관리자 페이지 recruitAdmin*/
+	@RequestMapping("/recruit/recruitAdmin")
+	public String recruitAdmin() {
+		
+		return "recruit/recruitAdmin"; 
+	}
 }
 

@@ -1,38 +1,10 @@
 .ChatForm {
     position: relative;
     width: 1177px;
-    height: 562px;
+    height: 800px;
     margin: auto;
     margin-top: 110px;
     
-}
-
-.Chat_title {
-    font-family:'Pretendard'; 
-    font-size: 36px;
-    margin-left: 24px;
-    margin-right: -4px;
-    
-}
-
-.Chat_title img {
-    width: 40px;
-    height: 40px;
-}
-
-.Chat_explain {
-    font-family:'Pretendard'; 
-    font-size: 18px;
-    margin-top: 24px;
-    margin-left: 24px;
-    margin-bottom: 30px;
-    color: #8A8A8A;
-}
-
-hr {
-    width: 1177px;
-    border: 1px solid #DDDDDD;
-    margin-bottom: 30px;
 }
 
 * {
@@ -41,32 +13,34 @@ hr {
 }
 
 .container {
+	position:relative;
     width: 1069px;
     margin: 0 auto;
-    padding: 25px
+    padding: 0px;
 }
 
 .container h1 {
     padding: 5px 5px 5px 15px;
     color: #F6F6F6;
-    border-left: 3px solid #FFBB00;
     margin-bottom: 20px;
 }
 
 .chating {
 	background-color: #F5F5F5;
-    width: 1177px;
+    width: 500px;
     height: 550px;
     margin: auto;
     margin-bottom: 10px;
     overflow: auto;
+    border-radius: 8px;
+    padding:20px;
 
 }
 
 .chating .me {
     font-family:'Pretendard'; 
     font-size:20px;
-    color: blue;
+    color: #ffc800;
     text-align: right;
 
 }
@@ -76,15 +50,16 @@ hr {
     color: #585858;
     text-align: left;
 }
-
+table.inputTable {
+	 margin: auto;
+}
 input {
     margin-top: 12px;
-    margin-left: 0px;
-    margin-right:20px;
+    margin: auto;
     font-family:'Pretendard';
-
+	padding-left:20px;
     font-size:20px;
-    width: 975px;
+    width: 350px;
     height: 56px;
     background: #F5F5F5;
     border-radius: 8px;
@@ -97,13 +72,13 @@ input {
 .inputTable Button {
 	
     margin-top: 0px;
-    margin-left: 30px;
+    margin-left: 10px;
     font-family:'Pretendard'; 
     font-size:20px;
     color:#FFF6F6;
     background: #C7C7C7;
     border-radius: 8px;
-    width: 165px;
+    width: 135px;
     height: 56px;
     border:0px;
 

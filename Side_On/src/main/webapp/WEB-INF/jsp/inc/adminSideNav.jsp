@@ -28,7 +28,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../board/Mypage">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>My page</span>
                 </a>
@@ -44,7 +44,7 @@
 
             <!-- Nav Item - mypage -->
             <li class="nav-item">
-                <a class="nav-link" href="../notice/noticeList">
+                <a class="nav-link" href="../notice/adminNoticeList">
                     <i class="fas fa-bullhorn"></i>
                     <span>Notice</span>
                 </a>
@@ -52,15 +52,15 @@
 
             <!-- Nav Item - 커뮤니티 -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../board/chat">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Community</span>
+                    <span>Chat</span>
                 </a>
             </li>
 
             <!-- Nav Item - vote -->
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="../vote/voteHome">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Vote</span>
                 </a>

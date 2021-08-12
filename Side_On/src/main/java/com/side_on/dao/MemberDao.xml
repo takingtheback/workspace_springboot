@@ -22,6 +22,14 @@
 		delete from member where member_id=#{memberId} and member_pw=#{memberPw}  
 	</delete>
 	
+	<!-- public int insertMember(Member dto) 
+		#{mileage, jdbcType=NUMERIC}, #{manager, jdbcType=VARCHAR} null colum config -->
+	<insert id="insertMember" parameterType="com.side_on.dto.Member">
+		insert into member
+		values(#{memberId}, #{memberPw}, #{email}, #{grade}, #{name}, #{mobile}, #{entryDate}, #{restCount},
+		#{reward})
+	</insert>
+	
 </mapper>
 
 

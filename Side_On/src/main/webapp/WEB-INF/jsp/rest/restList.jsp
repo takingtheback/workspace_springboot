@@ -76,7 +76,7 @@
 	                								<c:when test="${dto.restCheck eq 'T'}">처리완료</c:when>
 	                							</c:choose>
 	                						</th>
-	                						<th><a href="restMenagement"><i class="fas fa-fw fa-cog"></i></a></th>
+	                						<th><a href="restMenagement?restNo=${dto.restNo}"><i class="fas fa-fw fa-cog"></i></a></th>
 	                					</tr>
                 					</c:forEach>
                 					</tbody>

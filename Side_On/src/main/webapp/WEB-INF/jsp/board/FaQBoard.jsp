@@ -4,17 +4,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>FaQ Board</title>
+<title>FaQ Board|Side-On</title>
 <link type="text/css" rel="stylesheet" href="../css/FaQBoard_JHK.css">
 </head>
 <body>
 <%@ include file="../inc/header.jsp" %>
-
+<!-- Header -->
+<header class="bg-warning py-5">
+    <a href="/board/FaQBoard" style="text-decoration:none">
+    	<div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+        <!-- 헤더...어떻게... -->
+        <div style="padding-top: 8%;">
+            <h1 class="display-5 fw-bolder">FaQ</h1>
+            <p class="lead fw-normal text-white-80 mb-0">자주 물어보시는 질문들에 대한 답변입니다.</p>
+	    </div>
+	    </div>
+		</div>
+ 	</a>
+</header>
 <div class="FAQForm">
-<span class="FAQ_title">FAQ</span>
-<span class="FAQ_title">자주 묻는 질문</span>    
-<div class="FAQ_explain">자주 물어보시는 질문들에 대한 답변입니다.</div>    
-    
+   
 <div class="accordian">
 <input type="radio" name="accordian" id="answer01"/>
 <label for="answer01">Q. 프로젝트 모집 관련 질문<em></em></label>
@@ -54,7 +64,7 @@ A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 		<div class="footerTitle">채팅문의</div>
 		<div class="footerExplain">관리자와 대화로 문의하실 수 있습니다</div>
 		<div class="footerExplain2">09:00 AM - 12:00 PM  / 01:00 PM - 06:00 PM</div>
-		<input type="button" class="footerButton" value="관리자와 채팅하기" 
+		<input type="button" class="btn-warning" style="margin-top:10px; margin-left:20px;" value="관리자와 채팅하기" 
 		       onclick="location.href='chat'">
 	</div>
 <c:choose>
@@ -63,7 +73,7 @@ A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 		<div class="footerTitle">문의 남기기</div>
 		<div class="footerExplain">문의사항을 남겨주시면 메일로 답변해드립니다.</div>
 		<div class="footerExplain2">답장 받으실 메일을 남겨주세요.</div>
-		<input type="button" class="footerButton" value="문의하기"
+		<input type="button" class="btn-warning" style="margin-top:10px; margin-left:20px;" value="문의하기"
 		        onclick="location.href='contactEmail'">
 	</div>
 </c:when>		
@@ -74,7 +84,7 @@ A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 		<div class="footerTitle">문의 게시판</div>
 		<div class="footerExplain">문의 게시판을 이용하실 수 있습니다.</div>
 		<div class="footerExplain2">문의게시판 이동</div>
-		<input type="button" class="footerButton" value="문의게시판"
+		<input type="button" class="btn-warning" style="margin-top:10px; margin-left:20px;" value="문의게시판"
 		        onclick="location.href='QnABoard'">
 		</div>
 	</c:if>
@@ -84,7 +94,7 @@ A. 프로젝트 모집관련 질문에 대한 답변입니다.<br>
 		<div class="footerTitle">문의 게시판</div>
 		<div class="footerExplain">문의 게시판을 이용하실 수 있습니다.</div>
 		<div class="footerExplain2">문의게시판 이동</div>
-		<input type="button" class="footerButton" value="문의게시판"
+		<input type="button" class="btn-warning"  style="margin-top:10px; margin-left:20px;" value="문의게시판"
 		        onclick="location.href='QnABoard'">
 		</div>
 	</c:if>	

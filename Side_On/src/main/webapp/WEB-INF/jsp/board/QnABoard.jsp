@@ -75,7 +75,15 @@
 	         </a>
 	     </li>
 	 </ul>  		
-				
+	<div class="submit-area">
+	<!-- 글쓰기 버튼 -->
+    <button type="button" class="btn-warning" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
+	onclick="location.href='QnABoardWrite'">글쓰기</button>
+</div>
+
+
+	
+		
 	<form id="moveForm" method="get">	
 		<input type="hidden" name="pageNum" value="${pageMaker.cri.pageNum }">
 		<input type="hidden" name="amount" value="${pageMaker.cri.amount }">
@@ -86,22 +94,20 @@
 <!-- 검색창 -->
 <div class="search_wrap">
 		<div class="search_area">
-			<select name="type">
-				<option value="TCW" <c:out value="${pageMaker.cri.type eq 'TCW'?'selected':'' }"/>>제목 + 내용 + 작성자</option>
+			<select name="type" class="searchbox">
+				<option value="TCW" <c:out value="${pageMaker.cri.type eq 'TCW'?'selected':'' }"/>>전체검색</option>
 				<option value="TC" <c:out value="${pageMaker.cri.type eq 'TC'?'selected':'' }"/>>제목 + 내용</option>
 				<option value="TW" <c:out value="${pageMaker.cri.type eq 'TW'?'selected':'' }"/>>제목 + 작성자</option>
 				<option value="T" <c:out value="${pageMaker.cri.type eq 'T'?'selected':'' }"/>>제목</option>
 				<option value="C" <c:out value="${pageMaker.cri.type eq 'C'?'selected':'' }"/>>내용</option>
 				<option value="W" <c:out value="${pageMaker.cri.type eq 'W'?'selected':'' }"/>>작성자</option>
 			</select>		
-			<input type="text" name="keyword"  id="search" value="${pageMaker.cri.keyword }">
-			<button>Search</button>
+			<input type="text" name="keyword" class="searchbox" id="search" value="${pageMaker.cri.keyword }">
+			<button class="btn-warning">Search</button>
 		</div>
 	</div>		    
 
-<!-- 글쓰기 버튼 -->
-<button type="button" class="WriteButton" onmouseover="this.style.color='#ffc800';" onmouseout="this.style.color='black';"
-onclick="location.href='QnABoardWrite'">글쓰기</button>
+
 </div>  
 </div> 
 

@@ -46,30 +46,32 @@
 	
     <div class="form-group">
       <label for="exampleInputTitle" class="form-label mt-4">제목</label>
-      <input type="title" class="form-control" id="exampleInputTitle" aria-describedby="title" placeholder="목록에 보여질 제목을 작성해주세요.">
+      <input type="text" class="form-control" id="exampleInputTitle" aria-describedby="title" placeholder="목록에 보여질 제목을 작성해주세요.">
     </div>
 	
 	<div class="form-group">
       <label for="exampleInputWriter" class="form-label mt-4">이름</label>
-      <input type="writer" class="form-control" id="exampleInputWriter" aria-describedby="writer" placeholder="본명을 사용해주세요.">
+      <input type="text" class="form-control" id="exampleInputWriter" aria-describedby="writer" placeholder="본명을 사용해주세요.">
       <small id="writer" class="form-text text-muted"></small>
     </div>
 	
    <div class="form-group">
       <label for="exampleInputAdress" class="form-label mt-4">거주지역</label>
-      <input type="adress" class="form-control" id="exampleInputAdress" aria-describedby="emailHelp" placeholder="ex) 서울시 강남구">
+      <input type="text" class="form-control" id="exampleInputAdress" aria-describedby="emailHelp" placeholder="ex) 서울시 강남구">
       <small id="adress" class="form-text text-muted"></small>
     </div>
 	
     <div class="form-group">
       <label for="examplePosition" class="form-label mt-4">희망포지션</label>
       <select class="form-select" id="examplePosition">
-        <option>백엔드</option>
-        <option>프론트엔드</option>
-        <option>풀스택</option>
-        <option>웹디자인</option>
-        <option>기획/마케팅</option>
-		<option>기타</option>
+        <option>Front-end(프론트)</option>
+        <option>Back-end(백엔드)</option>
+        <option>AOS(안드로이드)</option>
+        <option>IOS(애플)</option>
+        <option>Server(서버)</option>
+		<option>UI/UX</option>
+		<option>기획</option>
+		<option>PM(Project Manager)</option>
       </select>
     </div>
     

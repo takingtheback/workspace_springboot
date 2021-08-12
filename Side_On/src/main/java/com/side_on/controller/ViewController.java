@@ -9,11 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ViewController {
 
-	@RequestMapping("/member/register")
-	public String Register() {
-		return "member/register";
-	}
-	
 	@RequestMapping("/find/list")
 	public String FindMemberList() {
 		return "find/list";

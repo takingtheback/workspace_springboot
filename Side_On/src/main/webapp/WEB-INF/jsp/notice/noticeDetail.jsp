@@ -1,117 +1,74 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<%@ include file="../inc/adminHeadLink.jsp" %>
-    <title>Notice</title>
+<meta charset="UTF-8">
+<%@ include file="../inc/adminHeadLink.jsp" %>
+<title>공지사항 | Side-On</title>
 </head>
+<body>
+	<!-- Top Nav inc -->
+	<%@ include file="../inc/adminTopNav.jsp"%>
 
-<body id="page-top">
+	<!-- Header-->
+	<section>
+		<!-- content body 내용 -->
+		<div class="card-body">
+			<div class="container">
+				<div class="row">
+					<table class="table table-striped"
+						style="text-align: center; border: 1px solid #dddddd;">
+						<thead>
+							<tr>
+								<th colspan="1" style="background-color: #eeeeee;">No.${dto.noticeNo}</th>
+								
+								<td colspan="5" style="text-align: left;">${dto.noticeTitle}</td>
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+							</tr>
 
-        <!-- Sidebar (사이드바) -->
-        <%@ include file="../inc/adminSideNav.jsp" %>
-        <!-- End of Sidebar -->
+							<tr>
+								<th colspan="1" style="background-color: #eeeeee;">작성자</th>
+								<td colspan="1">${dto.memberId}</td>
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+								<th colspan="1" style="background-color: #eeeeee;">조회수</th>
+								<td colspan="1">${dto.viewCount}</td>
 
-            <!-- Main Content -->
-            <div id="content">
+								<th colspan="1" style="background-color: #eeeeee;">게시일</th>
+								<td colspan="1">${dto.noticeDate}</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="6"
+									style="background-color: #fff; text-align: center;">${dto.noticeContent}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
 
-                <!-- Topbar (상단바) -->
-                <%@ include file="../inc/adminTopNav.jsp" %>
-                <!-- End of Topbar -->
+	<!-- Footer -->
+	<footer class="sticky-footer bg-white">
+		<div class="container my-auto">
+			<div class="copyright text-center my-auto">
+				<span>Copyright &copy; Side-On 2021</span>
+			</div>
+		</div>
+	</footer>
+	<!-- End of Footer -->
 
-                <!-- Begin Page Content -->
-                <div class="card shadow mb-4">
-                	<!-- content header 제목 -->
-                	<div class="card-header py-3">
-                	NOTICE
-                	</div>
-                	
-                	<!-- content body 내용 -->
-                	<div class="card-body">
-                		<div class="container">
-                			<div class="row">
-                				<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd;">
-                					<thead>
-                						<tr>
-                							<th colspan="1" style="background-color: #eeeeee; ">No.${dto.noticeNo}</th>
-                							<!-- 
-                							<td>${dto.noticeNo}</td>
-                							 -->
-                							<!-- 
-                							<th style="background-color: #eeeeee; text-align: center;">제목</th>
-                							 -->
-                							<td colspan="5" style="text-align: left;">${dto.noticeTitle}</td>
-                							
-                						</tr>
+	<!-- Bootstrap core JavaScript-->
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                						<tr>
-                							<th colspan="1" style="background-color: #eeeeee;">작성자</th>
-                							<td colspan="1">${dto.memberId}</td>
-                							
-                							<th colspan="1" style="background-color: #eeeeee; ">조회수</th>                							
-                							<td colspan="1">${dto.viewCount}</td>
+	<!-- Core plugin JavaScript-->
+	<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-                							<th colspan="1" style="background-color: #eeeeee;">게시일</th>
-                							<td colspan="1">${dto.noticeDate}</td>
-                						</tr>
-                					</thead>
-                					<tbody>
-                						<tr>
-                						<!-- 
-                							<th style="background-color: #eeeeee;">내용</th>
-                						 -->
-                							<td colspan="6" style="background-color:#fff; text-align: center;">${dto.noticeContent}</td>
-                						</tr>
-                					</tbody>
-                				</table>
-                			</div>
-                		</div>
-                	</div>
-                	
-                    <!-- Page Heading -->
-                    <!-- 
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
-                     -->
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Team2 Project 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-    
-	<%@ include file="../inc/adminBodyLink.jsp" %>
+	<!-- Custom scripts for all pages-->
+	<script src="../js/sb-admin-2.min_yuna.js"></script>
 
 </body>
-
 </html>

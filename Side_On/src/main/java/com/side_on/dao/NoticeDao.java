@@ -14,6 +14,10 @@ public interface NoticeDao {
 
 	public Notice selectNotice(String noticeNo);
 	
-	
+	public int insertNotice(Notice dto);
+
+	public List<Notice> selectAdminNoticeList();
+
+	public Notice selectAdminNotice(String noticeNo);
 	
 }

@@ -14,8 +14,8 @@
 	<h3>작성해주신 메일로 문의에 답변해드리겠습니다.</h3>
 		
 			<div class="btn-area">
-			<button type="submit" class="button" 
-                    onclick="location.href='/'">메인화면 복귀</button>
+			<button type="submit" class="btn-warning"
+                    onclick="location.href='FaQBoard'">FaQBoard</button>
 		</div>
 	
 </section>

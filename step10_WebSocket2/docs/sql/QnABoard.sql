@@ -36,7 +36,8 @@ insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트6', '문의합
 insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트7', '문의합니다문의합니다문의합니다', 'user01', '2021-07-21',0);
 insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트8', '문의합니다문의합니다문의합니다문의합니다', 'user02', '2021-07-22',0);
 insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트9', '문의합니다문의합니다문의합니다', 'user03', '2021-07-23',0);
-insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트10', '문의합니다문의합니다문의합니다', 'user01', '2021-07-24',0);insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트1', '문의합니다문의합니다문의합니다', 'user01', '2021-07-20',0);
+insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트10', '문의합니다문의합니다문의합니다', 'user01', '2021-07-24',0);
+insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트11', '문의합니다문의합니다문의합니다', 'user01', '2021-07-20',0);
 insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트12', '문의합니다문의합니다문의합니다문의합니다', 'user02', '2021-07-20',0);
 insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트13', '문의합니다문의합니다문의합니다', 'user03', '2021-07-20',0);
 insert into QNABOARD values(SEQ_QNABOARD.nextval, '문의테스트14', '문의합니다문의합니다문의합니다', 'user01', '2021-07-20',0);

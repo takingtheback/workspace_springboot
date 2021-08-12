@@ -25,7 +25,7 @@
 					if(d.sessionId == $("#sessionId").val()){
 						$("#chating").append("<p class='me'>" + d.msg + "</p>");	
 					}else{
-						$("#chating").append("<p class='others'>" + d.userName + " :" + d.msg + "</p>");
+						$("#chating").append("<p class='others'>" + d.userName + "<br>" + d.msg + "</p>");
 					}
 						
 				}else{

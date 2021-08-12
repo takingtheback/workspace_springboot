@@ -58,4 +58,17 @@ public class MemberService {
 		return true;
 	}
 	
+	/**
+	 * 회원가입
+	 * @param dto
+	 * @return
+	 */
+	public int addMember(Member dto) {
+		dto.setEntryDate(Utility.getCurrentDate());
+		dto.setGrade("G");
+		int result = memberDao.insertMember(dto);
+		//System.out.println("dao result: " + result);
+		log.debug("dao result: " + result);
+		return result;
+	}
 }

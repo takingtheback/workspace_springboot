@@ -20,11 +20,17 @@
    <%@ include file="../inc/header.jsp" %>
     <!-- Services-->
     
-     <div class="container">
-                <div style="background-color: antiquewhite; padding-top: 10%;">
-                    <h2>[제목] 사이드 프로젝트 전용 홈페이지 만드는 프로젝트 팀원 모집 </h2>
-                </div>
- 	 </div>              
+        <!-- Header-->
+        <header class="bg-warning py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                <!-- 헤더...어떻게... -->
+                <div style="padding-top: 8%;">
+                    <h1 class="display-5 fw-bolder">프로젝트 모집/지원</h1>
+            </div>
+            </div>
+         </div>
+        </header>            
     
 	<!-- 처음 -->
 	<div class="container emp-profile" style="font-family: 'Noto Sans KR', sans-serif;">

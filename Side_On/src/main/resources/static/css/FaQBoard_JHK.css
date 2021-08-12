@@ -1,12 +1,19 @@
 @charset "UTF-8";
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
+input[id*="answer"] + label:hover {
+	color:#ffc800;
+}
+
+input.footerButton:hover {
+	color:#ffc800;
+}
 .FAQForm {
     position: relative;
     width: 1086px;
     height: 626px;
     margin: auto;
-    margin-top: 157px;
+    margin-top: 40px;
 }
 .FAQ_title {
     font-family:'Pretendard'; 
@@ -92,9 +99,9 @@ input[id*="answer"]:checked + label em {
 .footer {
     position: absolute;
     width: 100%;
-    height: 400px;
+    height: 250px;
     left: 0px;
-    top: 680px;
+    top: 940px;
     background: #F6F6F6;
 }
 

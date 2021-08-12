@@ -21,6 +21,7 @@ public class NoticeController {
 	
 	@RequestMapping("/notice/noticeList")
 	public String noticeList(Model model) {
+		log.debug("[member] Notice List");
 		List<Notice> noticeList = noticeService.noticeList(); 
 		model.addAttribute("noticeList", noticeList);
 		return "notice/noticeList";
@@ -28,15 +29,43 @@ public class NoticeController {
 	
 	@RequestMapping("/notice/noticeDetail")
 	public String noticeDetail(String noticeNo, Model model) {
+		log.debug("[member] Notice Detail");
 		Notice dto = noticeService.noticeDetail(noticeNo);
 		model.addAttribute("dto",dto);
 		return "notice/noticeDetail";
 	}
 	
-	@RequestMapping("/notice/noticeForm")
-	public String noticeForm() {
-		log.debug("공지사항 작성 폼......");
-		return "notice/noticeForm";
+	@RequestMapping("/notice/adminNoticeList")
+	public String adminNoticeList(Model model) {
+		log.debug("[admin] Notice List");
+		List<Notice> noticeList = noticeService.adminNoticeList(); 
+		model.addAttribute("noticeList", noticeList);
+		return "notice/adminNoticeList";
 	}
 	
+	@RequestMapping("/notice/adminNoticeDetail")
+	public String adminNoticeDetail(String noticeNo, Model model) {
+		log.debug("[admin] Notice Detail");
+		Notice dto = noticeService.adminNoticeDetail(noticeNo);
+		model.addAttribute("dto",dto);
+		return "notice/adminNoticeDetail";
+	}
+	
+	@RequestMapping("/notice/adminNoticeForm")
+	public String adminNoticeForm() {
+		log.debug("[admin] notice Write Form");
+		return "notice/adminNoticeForm";
+	}
+	
+	@RequestMapping("/notice/noticeWrite")
+	public String noticeWrite(Notice dto, Model model) {
+		int result = noticeService.addNotice(dto);
+		if(result == 1) {
+			log.debug("[amdin] Notice Write Success :: ");
+			return "notice/adminNoticeList";
+		} else {
+			log.debug("[admin] Notice Write Fail :: please try again.");
+			return "notice/adminNoticeForm";
+		}
+	}
 }

@@ -1,6 +1,12 @@
 package com.side_on.dao;
 
+import java.sql.Connection;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
+
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -25,5 +31,6 @@ public interface MemberDao {
 	/** 회원탈퇴 */
 	public void deleteMember(String memberId, String memberPw);
 
-	
+	public int insertMember(Member dto);
+
 }

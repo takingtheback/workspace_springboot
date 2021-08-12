@@ -17,12 +17,17 @@
 <body>
 <%@ include file="../inc/header.jsp" %>
 
- <div class="container">
-                <div style="background-color: antiquewhite; padding-top: 20%;">
-                    <h2>마이페이지</h2>
-                </div>
- 	 </div>              
-    
+        <!-- Header-->
+        <header class="bg-warning py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                <!-- 헤더...어떻게... -->
+                <div style="padding-top: 8%;">
+                    <h1 class="display-5 fw-bolder">마이페이지</h1>
+            </div>
+            </div>
+         </div>
+        </header>
 
 <section>
 	
@@ -54,9 +59,9 @@
 				    </div>        
 				</div>
 				
-				<div class="col-md-9 " style="border : 1px solid black;">
+				<div class="col-md-9 " style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
 				
-					<h3>프로젝트 모집 현황</h3>
+					<h3 style="padding-left:5%; padding-top:5%;">프로젝트 모집 현황</h3>
 					
 					<table class="table table-hover" style="margin-top:10%; font-family: 'Noto Sans KR', sans-serif;">
 						  <thead>
@@ -91,26 +96,27 @@
 						  </tbody>
 						</table>
 						
-							<nav class="pagination-outer center" aria-label="Page navigation">
-					        <ul class="pagination">
-					            <li class="page-item">
-					                <a href="#" class="page-link" aria-label="Previous">
-					                    <span aria-hidden="true">«</span>
-					                </a>
-					            </li>
-					            <li class="page-item"><a class="page-link" href="#">1</a></li>
-					            <li class="page-item"><a class="page-link" href="#">2</a></li>
-					            <li class="page-item active"><a class="page-link" href="#">3</a></li>
-					            <li class="page-item"><a class="page-link" href="#">4</a></li>
-					            <li class="page-item"><a class="page-link" href="#">5</a></li>
-					            <li class="page-item">
-					                <a href="#" class="page-link" aria-label="Next">
-					                    <span aria-hidden="true">»</span>
-					                </a>
-					            </li>
-					        </ul>
-					    </nav>
-				
+						<div class="col-md-3 center" style="padding-top:10%;">     
+			               <nav class="pagination-outer center" aria-label="Page navigation">
+			                       <ul class="pagination">
+			                           <li class="page-item">
+			                               <a href="#" class="page-link" aria-label="Previous">
+			                                   <span aria-hidden="true">«</span>
+			                               </a>
+			                           </li>
+			                           <li class="page-item"><a class="page-link" href="#">1</a></li>
+			                           <li class="page-item"><a class="page-link" href="#">2</a></li>
+			                           <li class="page-item active"><a class="page-link" href="#">3</a></li>
+			                           <li class="page-item"><a class="page-link" href="#">4</a></li>
+			                           <li class="page-item"><a class="page-link" href="#">5</a></li>
+			                           <li class="page-item">
+			                               <a href="#" class="page-link" aria-label="Next">
+			                                   <span aria-hidden="true">»</span>
+			                               </a>
+			                           </li>
+			                       </ul>
+			                   </nav>
+						</div>
 				</div>
 			
 				
